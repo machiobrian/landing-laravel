@@ -82,3 +82,12 @@ Then go to your App Platform dashboard to follow the build logs.
 You can find more details on how to use `doctl` and the App Spec file in [this post](https://dev.to/erikaheidi/deploying-a-laravel-application-to-digitalocean-app-platform-via-doctl-with-an-app-spec-yaml-file-4dib).
 
 
+---------------------------------------------------------------------------------
+
+Eloquent doesn’t alter database structures, handling only data itself. Eloquent models are usually lean, with class properties automatically inferred from the model’s table structure.
+
+`Structural database operations are typically handled in Laravel via database migrations.` 
+
+- Migrations allow developers to programmatically define structural changes to the database, such as creating, modifying, and deleting tables.
+
+ `docker-compose exec app php artisan make:migration create_link_list_table` will generate a new file under the database/migrations directory in your Laravel application,That file contains generic code that you’ll modify to set up the lists table.

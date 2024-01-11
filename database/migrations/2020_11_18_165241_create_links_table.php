@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use App\Models\LinkList;
 
 class CreateLinksTable extends Migration
 {
@@ -17,6 +18,7 @@ class CreateLinksTable extends Migration
             $table->id();
             $table->string('url', 200);
             $table->text('description');
+            $table->foreignIdFor(LinkList::class); // create a foreign key column to the referenced Eloquent Model
             $table->timestamps();
         });
     }
